@@ -1,0 +1,29 @@
+To make demonstration:
+use the codes: ''pendulum_swup_noEKF_2'' and ''pendulum_swup_EKF''
+upload code
+give displacement to the cart
+give an initial angle for the pendulum (touch it) to start control proccedure when is used the code ''pendulum_swup_noEKF_2''
+
+
+
+For code ''pendulum_swup_noEKF_2'' reset the pendulum upright
+
+
+For codes
+''pendulum_swup_EKF''
+''pendulum_swup_noEKF''  pendulum is already reset down
+
+
+
+There are 2  Joint libraries:
+Joint : Contains all the linear frictions of the system (is used from ''pendulum_swup_EKF'' code)
+Joint1 : Contains only the coulomb frictions of the system (is used from ''pendulum_swup_noEKF'' and ''pendulum_swup_noEKF_2'' codes)
+
+
+Code ''pendulum_swup_noEKF'' not contain viscous friction
+while ''pendulum_swup_noEKF_2'' contains the viscous friction (cases if)
+
+Let us know for possible questions:
+Francesco : f.catarinacci@outlook.com
+Giannis : giakap89@gmail.com
+

@@ -1,0 +1,11 @@
+Data was obtained using the Arduino codes:
+''pendulum_swup_noEKF_2''
+''pendulum_swup_EKF''
+
+Coloumns of datasets : linear position, linear velocity,  angular velocity, angular position
+
+For ''Dataset_of_fig_5.1'' plot time period 23-30.1 second
+
+For ''Dataset_of_fig_5.11_5.12'' plot time period 25.69-94 second 
+
+For ''Dataset_ofEKF_slide28-29_ofpresentation'' plot time period 8.33-60 second

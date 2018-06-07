@@ -1,0 +1,31 @@
+# /home/simon/Desktop/arduino-1.8.5
+#
+# Try this installation script
+# https://gist.github.com/JayWalker512/3746938
+
+1) Download and exstract the arduino IDE from arduino
+Link:	https://www.arduino.cc/en/Main/Software
+Install:	./install.sh
+
+Please note the place for the exstration/installation, as this is used later! 
+
+
+2) Install udev Rules: 
+Copy past this into the terminal. All at ones.
+
+( sudo rm -f /tmp/49-teensy.rules /etc/udev/rules.d/49-teensy.rules /lib/udev/rules.d/49-teensy.rules &&
+  wget -O /tmp/49-teensy.rules https://www.pjrc.com/teensy/49-teensy.rules && 
+  sudo install -o root -g root -m 0664 /tmp/49-teensy.rules /lib/udev/rules.d/49-teensy.rules &&
+  sudo udevadm control --reload-rules &&
+  sudo udevadm trigger &&
+  echo "Success" )
+
+Link:	https://forum.pjrc.com/threads/45595?p=150445&viewfull=1#post150445
+
+3) Download and install Teensyduino
+Link:	https://www.pjrc.com/teensy/td_download.html
+
+After download a "TeensyduinoInstall.linux64" should appear in your download folder. 
+Right klik Properties -> Permissions -> Allow xecution files as program -> check
+Double klik
+
