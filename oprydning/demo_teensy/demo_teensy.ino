@@ -144,7 +144,8 @@ void loop()
   // stop all
   if (setOut == 0)
   { 
-    digitalWrite( ENABLESLED, LOW );   
+    digitalWrite( ENABLESLED, LOW );
+    digitalWrite( ENABLEPENDUL, LOW);   
     setOutSled  = 0;
     setOutPend1 = 0;
     I_error     = 0; // Reset integrator
@@ -153,23 +154,29 @@ void loop()
   else if( setOut == 1 )
   {
     digitalWrite( ENABLESLED, HIGH );
+    //digitalWrite( ENABLEPENDUL, HIGH );
 
-    if( (micros() - time_now) < 250000 )
+    if( (micros() - time_now) < 5500000000000 )
     {
-      setOutSled = 10;
+      setOutSled = 1;
+      setOutPend1 = 0;
     }
-    else if( (micros() - time_now) > 250000&&(micros() - time_now) < 250000 )
-    {
-      setOutSled = 0;
-    }
-    else if( (micros() - time_now) > 250000&&(micros() - time_now) < 1000000 )
-    {
-      setOutSled = -4;
-    }
+    //else if( (micros() - time_now) > 550000&&(micros() - time_now) < 550000 )
+    //{
+    //  setOutSled = 0;
+    //  setOutPend1 = 0;
+    //}
+    //else if( (micros() - time_now) > 550000&&(micros() - time_now) < 1000000 )
+    //{
+    //  setOutSled = 0;
+    //  setOutPend1 = 0;
+    //}
     else
     {
       setOutSled = 0;
+      setOutPend1 = 0;
       digitalWrite( ENABLESLED, LOW );
+      //digitalWrite( ENABLEPENDUL, LOW );
     }
   }
   // activate 
@@ -190,6 +197,7 @@ void loop()
   }
   
   sled.setOutput(setOutSled);
+  //pend1.setOutput(setOutPend1);
 
 
   //print serial outputs
@@ -199,8 +207,9 @@ void loop()
   Serial.print(   ","             );
   Serial.print(   time_stamp, DEC );
   Serial.print(   ","             );
-  Serial.println( setOutSled      );
-
+  Serial.print( setOutSled      );
+  Serial.print(   ","             );
+  Serial.println( setOutPend1     );
 
   //disable control near rail end-stops
   if( posSled < 0.05 || posSled > 0.72 )
@@ -221,6 +230,7 @@ void loop()
     Serial.println("Loop Time not uphold");
     
     digitalWrite( ENABLESLED, LOW);
+    digitalWrite( ENABLEPENDUL, LOW);
     
     setOutSled = 0;
     setOut     = 0;
