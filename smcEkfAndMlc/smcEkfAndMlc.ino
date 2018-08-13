@@ -296,15 +296,15 @@ void loop() {
     //float k1 = -16.3728, k2 = 9.8187, k3 = 23.2948;  // works! sorta..
     //float k1 = -17.1079, k2 = 10.4411, k3 = 24.0570; // works! sorta..
     //float k1 = -21.3849, k2 = 11.0635, k3 = 25.505;  // works! sorta..
-    //float k1 = -24.4399, k2 = 12.1979, k3 = 27.5572;   // contestant nr 1  aaand we have a winneeeer!
-    float k1 = -27.4949, k2 = 13.3323, k3 = 29.6093;     // contestant nr 2
+    //float k1 = -24.4399, k2 = 12.1979, k3 = 27.5572;   // contestant nr 1
+    float k1 = -27.4949, k2 = 13.3323, k3 = 29.6093;     // contestant nr 2  aaand we have a winneeeer!
     //float k1 = -34.7982, k2 = 16.2121, k3 = 34.6289;   // works! sorta..
     //float k1 = -34.2159, k2 = 15.0875, k3 = 32.9048;    // lots on x pos
     
     float rho     = 8.5638;
     float beta_0  = .1;
     float beta    = rho + beta_0;
-    float epsilon = 0.03;
+    float epsilon = 0.030;
 
     // ---------------------Friction determiner ------------------//
     if (((x_est_correction[2]) > 0) || (((x_est_correction[2]) == 0) && (setOutSled > 0))) {
