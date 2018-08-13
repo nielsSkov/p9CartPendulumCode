@@ -158,7 +158,7 @@ void loop()
 
     if( (micros() - time_now) < 5500000000000 )
     {
-      setOutSled = 1;
+      setOutSled = .1;
       setOutPend1 = 0;
     }
     //else if( (micros() - time_now) > 550000&&(micros() - time_now) < 550000 )
