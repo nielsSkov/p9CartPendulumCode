@@ -275,7 +275,7 @@ void loop() {
     float B_v_pos = 1.936;
     float B_v_neg = 1.422;
     float B_v_c = B_v_pos;
-    float l = 0.3235;
+    float l = 0.3348; //0.3235;
     float m_c = 5.273;
     float m_b = 0.201;
     float g = 9.81;
@@ -681,7 +681,8 @@ void loop() {
   // Set outputs
   ////////////////////////////////////////////
 
-  sled.setOutput(setOutSled,1);
+  //sled.setOutput(setOutSled,1);
+  sled.setOutput(setOutSledNoComp,1);
   
   Serial.print(posSled, 5);
   Serial.print(",");
