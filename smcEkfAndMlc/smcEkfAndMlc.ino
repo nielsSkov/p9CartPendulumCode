@@ -301,7 +301,7 @@ void loop() {
     //float k1 = -34.7982, k2 = 16.2121, k3 = 34.6289;   // works! sorta..
     //float k1 = -34.2159, k2 = 15.0875, k3 = 32.9048;    // lots on x pos
     
-    float rho     = 8.5638;
+    float rho     = 8.8;
     float beta_0  = .1;
     float beta    = rho + beta_0;
     float epsilon = 0.030;
